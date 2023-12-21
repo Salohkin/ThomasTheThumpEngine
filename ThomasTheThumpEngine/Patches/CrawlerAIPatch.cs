@@ -16,11 +16,11 @@ namespace ThomasTheThumpEngine.Patches
     {
         [HarmonyPatch("Update")]
         [HarmonyPostfix]
-        static void ThomasThemePatch(ref int ___currentBehaviourStateIndex, ref bool ___hasEnteredChaseMode, ref AudioSource ___creatureVoice) // ref bool ___lostPlayerInChase
+        static void PlayThomasTheme(ref int ___currentBehaviourStateIndex, ref bool ___hasEnteredChaseMode, ref AudioSource ___creatureVoice) // ref bool ___lostPlayerInChase
         {
             if (___currentBehaviourStateIndex == 1 && !___hasEnteredChaseMode)
             {
-                ___creatureVoice.PlayOneShot(LoadThemePatch.ThomasTheme);
+                ___creatureVoice.PlayOneShot(StartOfRoundPatch.ThomasTheme);
             }
         }
     }

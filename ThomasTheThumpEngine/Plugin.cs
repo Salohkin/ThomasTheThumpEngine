@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ThomasTheThumpEngine.Patches;
+using static ThomasTheThumpEngine.Patches.StartOfRoundPatch;
 
 namespace ThomasTheThumpEngine
 {

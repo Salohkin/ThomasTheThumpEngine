@@ -11,22 +11,20 @@ using UnityEngine;
 
 namespace ThomasTheThumpEngine.Patches
 {
+    [HarmonyPatch(typeof(StartOfRound))]
     internal class StartOfRoundPatch
     {
-        [HarmonyPatch(typeof(StartOfRound))]
-        internal class LoadThemePatch
+        public static AudioClip ThomasTheme;
+
+        [HarmonyPatch("Start")]
+        [HarmonyPostfix]
+        static void LoadTheme()
         {
-            public static AudioClip ThomasTheme;
-            [HarmonyPatch("Start")]
-            [HarmonyPostfix]
-            static void StartPatch()
+            string path = Path.Combine(Paths.PluginPath, "ThomasTheThumpEngine");
+            ThomasTheme = SoundTool.GetAudioClip(path, "Assets", "Thomas_the_Tank_Engine_Theme.ogg");
+            if (ThomasTheme != null)
             {
-                string path = Path.Combine(Paths.PluginPath, "ThomasTheThumpEngine");
-                ThomasTheme = SoundTool.GetAudioClip(path, "Assets", "Thomas_the_Tank_Engine_Theme.ogg");
-                if (ThomasTheme != null)
-                {
-                    ThumperThomasBase.Instance.logger.LogInfo("Chase theme loaded successfully!");
-                }
+                ThumperThomasBase.Instance.logger.LogInfo("Chase theme loaded successfully!");
             }
         }
     }
