@@ -1,16 +1,10 @@
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\ThomasTheThumpEngine.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\ThomasTheThumpEngine.pdb
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\0Harmony.dll
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\Assembly-CSharp.dll
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\BepInEx.dll
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\UnityEngine.CoreModule.dll
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\UnityEngine.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\Mono.Cecil.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\MonoMod.Utils.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\MonoMod.RuntimeDetour.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\netstandard.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\UnityEngine.AnimationModule.dll
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\UnityEngine.AudioModule.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\Unity.Netcode.Runtime.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\Unity.Animation.Rigging.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\UnityEngine.PhysicsModule.dll
@@ -111,4 +105,3 @@ C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\ob
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\obj\Debug\ThomasTheThumpEngine.csproj.CopyComplete
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\obj\Debug\ThomasTheThumpEngine.dll
 C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\obj\Debug\ThomasTheThumpEngine.pdb
-C:\Programming\LethalCompanyModding\ThomasTheThumpEngine\ThomasTheThumpEngine\bin\Debug\LC_SoundTool.dll

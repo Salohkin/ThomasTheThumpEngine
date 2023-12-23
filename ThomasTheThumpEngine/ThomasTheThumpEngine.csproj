@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="Patches\CrawlerAIPatch.cs" />
     <Compile Include="Patches\StartOfRoundPatch.cs" />
-    <Compile Include="Plugin.cs" />
+    <Compile Include="ThomasTheThumpEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,11 +20,15 @@ namespace ThomasTheThumpEngine.Patches
         [HarmonyPostfix]
         static void LoadTheme()
         {
-            string path = Path.Combine(Paths.PluginPath, "ThomasTheThumpEngine");
-            ThomasTheme = SoundTool.GetAudioClip(path, "Assets", "Thomas_the_Tank_Engine_Theme.ogg");
-            if (ThomasTheme != null)
+            try
             {
+                string path = Path.Combine(Paths.PluginPath, "LineLoad-ThomasTheThumpEngine");
+                ThomasTheme = SoundTool.GetAudioClip(path, "Thomas_the_Tank_Engine_Theme.ogg");
                 ThumperThomasBase.Instance.logger.LogInfo("Chase theme loaded successfully!");
+            }
+            catch (Exception e)
+            {
+                ThumperThomasBase.Instance.logger.LogWarning(e);
             }
         }
     }
