@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patches\CrawlerAIPatch.cs" />
+    <Compile Include="Patches\StartMatchLevelPatch.cs" />
     <Compile Include="Patches\StartOfRoundPatch.cs" />
     <Compile Include="ThomasTheThumpEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
