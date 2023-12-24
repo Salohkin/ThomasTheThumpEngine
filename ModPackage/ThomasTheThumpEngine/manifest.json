@@ -1,6 +1,6 @@
 {
     "name": "ThomasTheThumpEngine",
-    "version_number": "1.0.1",
+    "version_number": "1.0.3",
     "website_url": "https://github.com/Salohkin/ThomasTheThumpEngine",
     "description": "Plays the Thomas the Tank Engine theme whenever a thumper starts chasing you.",
     "dependencies": [

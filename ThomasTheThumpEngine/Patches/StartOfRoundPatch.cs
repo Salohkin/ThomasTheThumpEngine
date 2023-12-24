@@ -2,11 +2,7 @@
 using HarmonyLib;
 using LCSoundTool;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace ThomasTheThumpEngine.Patches
@@ -14,7 +10,7 @@ namespace ThomasTheThumpEngine.Patches
     [HarmonyPatch(typeof(StartOfRound))]
     internal class StartOfRoundPatch
     {
-        public static AudioClip ThomasTheme;
+        public static AudioClip thomasTheme;
 
         [HarmonyPatch("Start")]
         [HarmonyPostfix]
@@ -23,7 +19,7 @@ namespace ThomasTheThumpEngine.Patches
             try
             {
                 string path = Path.Combine(Paths.PluginPath, "LineLoad-ThomasTheThumpEngine");
-                ThomasTheme = SoundTool.GetAudioClip(path, "Thomas_the_Tank_Engine_Theme.ogg");
+                thomasTheme = SoundTool.GetAudioClip(path, "Thomas_the_Tank_Engine_Theme.ogg");
                 ThumperThomasBase.Instance.logger.LogInfo("Chase theme loaded successfully!");
             }
             catch (Exception e)

@@ -1,26 +1,35 @@
 ﻿using UnityEngine;
 using HarmonyLib;
-using BepInEx;
-using BepInEx.Logging;
-using LCSoundTool;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using LCSoundTool.Resources;
-using static ThomasTheThumpEngine.Patches.StartOfRoundPatch;
 
 namespace ThomasTheThumpEngine.Patches
 {
     [HarmonyPatch(typeof(CrawlerAI))]
     internal class CrawlerAIPatch : MonoBehaviour
     {
-        [HarmonyPatch("Update")]
+        [HarmonyPatch("BeginChasingPlayerClientRpc")]
         [HarmonyPostfix]
         static void PlayThomasTheme(ref int ___currentBehaviourStateIndex, ref bool ___hasEnteredChaseMode, ref AudioSource ___creatureVoice)
         {
             if (___currentBehaviourStateIndex == 1 && !___hasEnteredChaseMode)
             {
-                ___creatureVoice.PlayOneShot(StartOfRoundPatch.ThomasTheme);
+                ___creatureVoice.PlayOneShot(StartOfRoundPatch.thomasTheme);
+                ThumperThomasBase.Instance.logger.LogInfo("Chase theme started!");
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(EnemyAI))]
+    internal class EnemyAIPatch : MonoBehaviour
+    {
+        [HarmonyPatch("SwitchToBehaviourStateOnLocalClient")]
+        [HarmonyPostfix]
+        static void StopThomasTheme(int ___currentBehaviourStateIndex, ref EnemyType ___enemyType, ref AudioSource ___creatureVoice)
+        {
+            //ThumperThomasBase.Instance.logger.LogInfo("Enemy name is: " + ___enemyType.enemyName);
+            if (___currentBehaviourStateIndex == 0 && ___enemyType.enemyName.ToLower() == "crawler")
+            {
+                ___creatureVoice.Stop();
+                ThumperThomasBase.Instance.logger.LogInfo("Chase theme stopped!");
             }
         }
     }

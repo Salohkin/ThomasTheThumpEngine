@@ -1,13 +1,8 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ThomasTheThumpEngine.Patches;
-using static ThomasTheThumpEngine.Patches.StartOfRoundPatch;
+using UnityEngine;
 
 namespace ThomasTheThumpEngine
 {
@@ -16,7 +11,7 @@ namespace ThomasTheThumpEngine
     {
         private const string pluginGUID = "LineLoad.ThomasTheThumpEngine";
         private const string pluginName = "Thomas The Thump Engine";
-        private const string pluginVersion = "1.0.1";
+        private const string pluginVersion = "1.0.3";
 
         private readonly Harmony harmony = new Harmony(pluginGUID);
 
@@ -37,6 +32,7 @@ namespace ThomasTheThumpEngine
             harmony.PatchAll(typeof(ThumperThomasBase));
             harmony.PatchAll(typeof(StartOfRoundPatch));
             harmony.PatchAll(typeof(CrawlerAIPatch));
+            harmony.PatchAll(typeof(EnemyAIPatch));
         }
     }
 }
