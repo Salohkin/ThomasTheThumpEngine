@@ -11,13 +11,15 @@ namespace ThomasTheThumpEngine
     {
         private const string pluginGUID = "LineLoad.ThomasTheThumpEngine";
         private const string pluginName = "Thomas The Thump Engine";
-        private const string pluginVersion = "1.0.3";
+        private const string pluginVersion = "1.0.4";
 
         private readonly Harmony harmony = new Harmony(pluginGUID);
 
         public static ThumperThomasBase Instance;
 
         internal ManualLogSource logger;
+
+        public static AudioClip thomasTheme;
 
         private void Awake()
         {
