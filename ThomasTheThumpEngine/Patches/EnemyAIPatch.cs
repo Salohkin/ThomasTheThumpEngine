@@ -7,7 +7,7 @@ namespace ThomasTheThumpEngine.Patches
     internal class EnemyAIPatch : MonoBehaviour
     {
         [HarmonyPatch("KillEnemyClientRpc")]
-        [HarmonyPrefix] // prefix so the creature isn't destroyed (needs to be tested)
+        [HarmonyPrefix] // prefix so the creature isn't already destroyed when this runs (postfix might work, but haven't tested it)
         static void StopThemeOnDeath(EnemyAI __instance)
         {
             if (isEnemy(__instance, "crawler"))

@@ -8,7 +8,7 @@ namespace ThomasTheThumpEngine.Patches
     {
         [HarmonyPatch("BeginChasingPlayerClientRpc")]
         [HarmonyPostfix]
-        static void PlayTheme(CrawlerAI __instance, ref bool ___hasEnteredChaseMode) //ref int ___currentBehaviourStateIndex, ref bool ___hasEnteredChaseMode, ref AudioSource ___creatureVoice
+        static void PlayTheme(CrawlerAI __instance, ref bool ___hasEnteredChaseMode)
         {
             if (__instance.currentBehaviourStateIndex == 1 && !___hasEnteredChaseMode)
             {
